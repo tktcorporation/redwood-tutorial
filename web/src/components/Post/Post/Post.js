@@ -10,7 +10,7 @@ const DELETE_POST_MUTATION = gql`
   }
 `
 
-const jsonDisplay = (obj) => {
+const _jsonDisplay = (obj) => {
   return (
     <pre>
       <code>{JSON.stringify(obj, null, 2)}</code>
@@ -26,7 +26,7 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
+const _checkboxInputTag = (checked) => {
   return <input type="checkbox" checked={checked} disabled />
 }
 
@@ -80,13 +80,12 @@ const Post = ({ post }) => {
         >
           Edit
         </Link>
-        <a
-          href="#"
+        <button
           className="rw-button rw-button-red"
           onClick={() => onDeleteClick(post.id)}
         >
           Delete
-        </a>
+        </button>
       </nav>
     </>
   )

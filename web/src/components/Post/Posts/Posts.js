@@ -22,7 +22,7 @@ const truncate = (text) => {
   return output
 }
 
-const jsonTruncate = (obj) => {
+const _jsonTruncate = (obj) => {
   return truncate(JSON.stringify(obj, null, 2))
 }
 
@@ -34,7 +34,7 @@ const timeTag = (datetime) => {
   )
 }
 
-const checkboxInputTag = (checked) => {
+const _checkboxInputTag = (checked) => {
   return <input type="checkbox" checked={checked} disabled />
 }
 
@@ -91,14 +91,14 @@ const PostsList = ({ posts }) => {
                   >
                     Edit
                   </Link>
-                  <a
+                  <button
                     href="#"
                     title={'Delete post ' + post.id}
                     className="rw-button rw-button-small rw-button-red"
                     onClick={() => onDeleteClick(post.id)}
                   >
                     Delete
-                  </a>
+                  </button>
                 </nav>
               </td>
             </tr>

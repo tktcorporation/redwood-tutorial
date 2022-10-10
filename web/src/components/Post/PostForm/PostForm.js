@@ -7,7 +7,7 @@ import {
   Submit,
 } from '@redwoodjs/forms'
 
-const formatDatetime = (value) => {
+const _formatDatetime = (value) => {
   if (value) {
     return value.replace(/:\d{2}\.\d{3}\w/, '')
   }

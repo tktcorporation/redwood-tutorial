@@ -11,12 +11,6 @@ export const comments: QueryResolvers['comments'] = ({
   })
 }
 
-export const comment: QueryResolvers['comment'] = ({ id }) => {
-  return db.comment.findUnique({
-    where: { id },
-  })
-}
-
 export const Comment: CommentRelationResolvers = {
   post: (_obj, { root }) => {
     return db.comment.findUnique({ where: { id: root?.id } }).post()
