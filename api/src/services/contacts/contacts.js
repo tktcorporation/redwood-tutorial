@@ -1,5 +1,6 @@
-import { db } from 'src/lib/db'
 import { validate } from '@redwoodjs/api'
+
+import { db } from 'src/lib/db'
 
 export const contacts = () => {
   return db.contact.findMany()

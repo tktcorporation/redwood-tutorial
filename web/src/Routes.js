@@ -8,8 +8,9 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Router, Route, Private, Set } from '@redwoodjs/router'
-import PostsLayout from 'src/layouts/PostsLayout'
+
 import BlogLayout from 'src/layouts/BlogLayout'
+import PostsLayout from 'src/layouts/PostsLayout'
 
 const Routes = () => {
   return (
