@@ -25,11 +25,15 @@ interface FormValues {
   comment: string
 }
 
-const CommentForm = () => {
+interface Props {
+  postId: number
+}
+
+const CommentForm = ({ postId }: Props) => {
   const [createComment, { loading, error }] = useMutation(CREATE)
 
   const onSubmit: SubmitHandler<FormValues> = (input) => {
-    createComment({ variables: { input } })
+    createComment({ variables: { input: { postId, ...input } } })
   }
 
   return (
