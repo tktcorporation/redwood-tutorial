@@ -1,6 +1,6 @@
 import { render, screen } from '@redwoodjs/testing'
 
-import Article from './Article'
+import Article from './Article.tsx'
 
 describe('Article', () => {
   it('renders a blog post', () => {
