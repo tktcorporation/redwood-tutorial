@@ -7,10 +7,12 @@
 
 [web]
   port = 8910
+  host = "0.0.0.0"
   apiUrl = "/.netlify/functions"
   title = "Redwood Tutorial Blog"
 [api]
   port = 8911
+  host = "0.0.0.0"
 [browser]
   open = true
 [experimental]
